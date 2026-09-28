@@ -18,9 +18,10 @@ button {
   align-items: center;
 }
 
-.detalles { 
+.detalles {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3; /* Cambia este número por las líneas que desees */
+  -webkit-line-clamp: 3;
+  /* Cambia este número por las líneas que desees */
   overflow: hidden;
 }

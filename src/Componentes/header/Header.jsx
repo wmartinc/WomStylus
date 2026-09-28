@@ -17,6 +17,7 @@ function Header() {
           type="button"
           aria-label='Filtrar'
         >
+          Filtrar
           <ArrowUpAz size={18} />
         </button>
       </form>
