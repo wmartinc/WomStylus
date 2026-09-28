@@ -1,0 +1,26 @@
+@import url("stardom.css");
+@import url("/src/animaciones.css");
+@import "tailwindcss";
+
+
+@theme {
+  --color-titulo: #272643;
+  --color-descripcion: #2c698d;
+}
+
+button {
+  cursor: pointer;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detalles { 
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* Cambia este número por las líneas que desees */
+  overflow: hidden;
+}
