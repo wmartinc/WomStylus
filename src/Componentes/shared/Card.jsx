@@ -10,28 +10,22 @@ const Card = ({ producto }) => {
   }
 
   return (
-    <div className="w-full max-w-[250px] m-auto transition-transform hover:-translate-y-1 border border-slate-800/5 mt-4 aparicion flex flex-col justify-center shadow-sm rounded">
-        <div className="w-[45%] border border-black/10 mt-1 m-auto"></div>
+    <div className="tarjeta m-auto transition-transform hover:-translate-y-1 border border-slate-800/5 mt-4 aparicion flex flex-col justify-center shadow-sm rounded">
+      <div className="w-[45%] border border-black/10 mt-1 m-auto"></div>
       <div className="w-[90%] border border-black/10 mt-1 m-auto"></div>
 
       <img loading="eager" src={producto.thumbnail} alt="" className={cargada ? "" : "hidden"} onLoad={() => setCargada(true)} />
       {!cargada && <SkeletonImage />}
-      <h2 className="text-center">{producto.title}</h2>
+      <h2 className="text-center p-4 font-semibold text-sm">{producto.title}</h2>
       <div className="p-4 w-full flex flex-col">
-        <p className="detalles text-sm text-shadow-sm leading-5 text-descripcion">
-          {
-            producto.description
-          }
-        </p>
-          <span className="m-auto text-sm text-zinc-600">SKU: {producto.sku}</span>
+        <span className="m-auto text-sm text-zinc-600 text-center">SKU: {producto.sku}</span>
         <div className="flex justify-between mt-5">
           <span className="text-sm text-cyan-950 font-semibold  ">Precio: ${producto.price}</span>
-          <span className="flex items-center gap-2"><Star size={15} className="fill-yellow-300 stroke-yellow-300" /> {producto.rating}</span>
+          <span className="flex items-center gap-2 text-sm"><Star size={15} className="fill-yellow-300 stroke-yellow-300" /> {producto.rating}</span>
         </div>
         <span className="text-sm text-slate-500">Estado: {producto.availabilityStatus}</span>
-        <button className="ml-auto mt-2 underline" onClick={mostrarInformacionProducto}>Ver mas</button>
+        <button className="ml-auto mt-2 underline text-sm" onClick={mostrarInformacionProducto}>Ver mas</button>
       </div>
-
     </div>
   )
 }
