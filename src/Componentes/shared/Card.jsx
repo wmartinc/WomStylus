@@ -6,12 +6,12 @@ const Card = ({ producto }) => {
   const [cargada, setCargada] = useState(false)
 
   const mostrarInformacionProducto = () => {
-    
+
   }
 
   return (
-    <div className="border w-full max-w-60 border-slate-800/5 mt-4 md:w-60 aparicion flex flex-col justify-center shadow-sm rounded transition-transform hover:-translate-y-1">
-      <div className="w-[45%] border border-black/10 mt-1 m-auto"></div>
+    <div className="w-full max-w-[250px] m-auto transition-transform hover:-translate-y-1 border border-slate-800/5 mt-4 aparicion flex flex-col justify-center shadow-sm rounded">
+        <div className="w-[45%] border border-black/10 mt-1 m-auto"></div>
       <div className="w-[90%] border border-black/10 mt-1 m-auto"></div>
 
       <img loading="eager" src={producto.thumbnail} alt="" className={cargada ? "" : "hidden"} onLoad={() => setCargada(true)} />

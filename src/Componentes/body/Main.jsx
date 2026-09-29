@@ -14,9 +14,9 @@ function Main() {
   const {isLoading} = useSWR(PRODUCTOS_API, obtenerTodosProductos, { onSuccess: guardarDatos})
   
   return (
-    <main className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8 flex flex-wrap gap-5 justify-center">
+    <main className="mx-auto w-full max-w-[95%] px-4 py-8 sm:px-6 lg:px-8 flex flex-wrap gap-5 justify-center">
       {
-          (isLoading && data == null) ? <Spinner /> : <Productos productos={data?.products} total={data?.total} />
+        (isLoading && data == null) ? <Spinner /> : <Productos productos={data?.products} total={data?.total} />
       }
     </main>
   )
